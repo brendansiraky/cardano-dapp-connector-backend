@@ -4,7 +4,7 @@ An example of authentication by reading from a token that was signed via a users
 
 Check out a live working demo of this [here](cardanodappconnector.tech).
 
-Check out the repo for the front end [here](https://github.com/brendansiraky/cardano-dapp-connector).
+Check out the repo for the frontend [here](https://github.com/brendansiraky/cardano-dapp-connector).
 
 ## Requirements
 - Docker and Docker Compose.
