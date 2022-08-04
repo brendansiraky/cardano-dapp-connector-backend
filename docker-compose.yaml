@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    environment:
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_USER: postgres
+        POSTGRES_DB: cardano_dapp_connector
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  web:
+    image: brendansiraky/cardano-dapp-connector-backend
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
