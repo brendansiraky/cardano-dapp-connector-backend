@@ -30,9 +30,10 @@ export class AppController {
 
     @Get('')
     async helloWorld() {
+        console.log('this is being called')
         const user = await this.knex.table('users')
             .select('*')
-
+        console.log(user)
         return user
     }
 }

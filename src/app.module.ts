@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { UsersService } from './users/users.service';
 import { KnexModule } from 'nest-knexjs';
+import { POSTGRES_HOST } from 'config';
 
 @Module({
   imports: [
@@ -12,7 +13,7 @@ import { KnexModule } from 'nest-knexjs';
       config: {
         client: 'pg',
         connection: {
-          host: 'db',
+          host: POSTGRES_HOST,
           database: 'cardano_dapp_connector',
           user: 'postgres',
           password: 'postgres',
