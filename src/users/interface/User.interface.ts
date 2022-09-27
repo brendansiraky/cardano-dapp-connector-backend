@@ -1,4 +1,4 @@
-export class UserDto {
+export type User = {
     id: string
     nonce: string
 }

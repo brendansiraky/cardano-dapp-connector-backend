@@ -8,6 +8,4 @@ RUN npm install
 
 COPY . .
 
-RUN sh web.entrypoint.sh
-
 CMD ["npm", "start"]

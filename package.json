@@ -26,10 +26,9 @@
     "@nestjs/jwt": "^9.0.0",
     "@nestjs/passport": "^9.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/typeorm": "^9.0.1",
     "dotenv": "^16.0.1",
-    "knex": "^2.2.0",
     "nanoid": "^3.3.2",
-    "nest-knexjs": "^0.0.12",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
@@ -37,6 +36,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.5.6",
+    "typeorm": "^0.3.10",
     "web3-cardano-token": "^0.0.12"
   },
   "devDependencies": {

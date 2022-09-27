@@ -4,26 +4,16 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { UsersService } from './users/users.service';
-import { KnexModule } from 'nest-knexjs';
-import { POSTGRES_HOST } from 'config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { typeOrmConfig } from './config/typeorm.config';
 
 @Module({
   imports: [
-    KnexModule.forRoot({
-      config: {
-        client: 'pg',
-        connection: {
-          host: POSTGRES_HOST,
-          database: 'cardano_dapp_connector',
-          user: 'postgres',
-          password: 'postgres',
-        },
-      },
-    }),
+    TypeOrmModule.forRoot(typeOrmConfig),
     AuthModule, 
     UsersModule,
   ],
   controllers: [AppController],
-  providers: [AppService, UsersService],
+  providers: [AppService],
 })
 export class AppModule {}
